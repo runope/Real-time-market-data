@@ -1,8 +1,8 @@
-use chrono::{DateTime, FixedOffset};
+use chrono::naive::NaiveDateTime;
 
 
 #[derive(Default, Debug)]
-pub struct RtData {
+pub struct ItemData {
     pub name: String,
     pub code: String,
     pub now: f32,
@@ -31,7 +31,7 @@ pub struct RtData {
     pub ask4_volume: i64,
     pub ask5: f32,
     pub ask5_volume: i64,
-    pub datatime: Option<DateTime<FixedOffset>>,
+    pub datatime: Option<NaiveDateTime>,
     pub gain_amout: f32,
     pub gain_percentage: f32,
     pub high: f32,
